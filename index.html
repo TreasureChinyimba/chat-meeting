@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Live Chat</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="user-list">
+            <!-- User list goes here -->
+        </div>
+        <div class="chat-box">
+            <div class="chat-header">
+                <div class="user-info">
+                    <div class="user-info" onclick="openFileInput()">
+                        <img id="profile-pic" src="default-profile-pic.png" alt="Profile Picture" class="profile-pic">
+                        <span class="username">John Doe</span>
+                    </div>
+                    
+                    <!-- Add this input element for file uploading -->
+                    <input type="file" id="profile-pic-input" style="display: none" accept="image/*">
+                    
+                </div>
+                <button onclick="logout()">Logout</button>
+            </div>
+            <div class="message-container" id="message-container">
+                <!-- Messages go here -->
+            </div>
+            <div class="input-container">
+                <textarea id="message-input" placeholder="Type your message..."></textarea>
+                <input type="file" id="file-input">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
