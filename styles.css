@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,7 +29,7 @@ body {
 }
 
 .chat-header {
-    background-color: #4CAF50;
+    background-color: #1b76ec;
     color: white;
     padding: 10px;
     display: flex;
@@ -36,9 +42,40 @@ body {
     align-items: center;
 }
 
+.option {
+    position: relative;
+    left: 20px;
+}
+
+.username {
+    font-size: 2em;
+}
+
+.active {
+    background: #1b76ec;
+    border-radius: 50%;
+    padding: 3px;
+    position: relative;
+    right: 25px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green-light {
+    background: #00ff08;
+    border-radius: 50%;
+    padding: 6px;
+   
+}
+
+
 .profile-pic {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.226);
+    cursor: pointer;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -65,6 +102,15 @@ textarea {
 }
 
 button {
-    padding: 8px;
+    padding: 10px;
     cursor: pointer;
+    background: #196bd6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e78ee;
 }
