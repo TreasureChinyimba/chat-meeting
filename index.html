@@ -14,21 +14,60 @@
         <div class="chat-box">
             <div class="chat-header">
                 <div class="user-info">
-                    <div class="user-info" onclick="openFileInput()">
-                        <img id="profile-pic" src="default-profile-pic.png" alt="Add Profile" class="profile-pic">
-                        <span class="active"><div class="green-light"></div></span>
-                        <span class="username">Treasure Chinyimba</span>                        
-                    </div>
-
-                    <div class="option">
-                        <button class="group-btn">Group</button>
-                    <button class="private-btn">Private Chat</button>
-                    </div>
-                    
-                    <!-- Add this input element for file uploading -->
-                    <input type="file" id="profile-pic-input" style="display: none" accept="image/*">
-                    
+                    <!-- Profile picture and user details -->
+                    <img id="profile-pic" src="default-profile-pic.png" alt="Add Profile" class="profile-pic">
+                    <span class="active"><div class="green-light"></div></span>
+                    <span class="username">Treasure Chinyimba</span>
                 </div>
+
+                <!-- ... (existing HTML code) ... -->
+
+<div id="userListModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeUserListModal()">&times;</span>
+        <div class="user-list">
+            <!-- User list goes here -->
+            <div class="user" onclick="startChat('User2', 'Role2')">
+                <button id="mable"><span class="username">Mable</span></button>
+                <div class="indiActive"><div class="indiGreen"></div></div>
+                <span class="userNetwork">Active</span>
+            </div>
+            
+            
+            
+            <div class="user" onclick="startChat('User2', 'Role2')">
+                <button id="raph"><span class="username">Raphael</span></button>
+                <div class="indiActive"><div class="indioff"></div></div>
+                <span class="userNetwork">Offline</span>
+            </div>
+
+            <div class="user" onclick="startChat('User2', 'Role2')">
+                <button id="zen"><span class="username">Zenith</span></button>
+                <div class="indiActive"><div class="indiGreen"></div></div>
+                <span class="userNetwork">Active</span>
+            </div>
+
+            <div class="user" onclick="startChat('User2', 'Role2')">
+                <button id="mas"><span class="username">Mas</span></button>
+                <div class="indiActive"><div class="indioff"></div></div>
+                <span class="userNetwork">Offline</span>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- ... (existing HTML code) ... -->
+
+
+                <!-- Share buttons -->
+                <div class="option">
+                    <div class="share-buttons">
+                        <button onclick="openUserListModal()" class="group-btn">Share to Individual</button>
+                        <button onclick="shareToGroup()" class="private-btn">Share to Group</button>
+                    </div>
+                </div>
+
                 <button onclick="logout()">Logout</button>
             </div>
             <div class="message-container" id="message-container">
